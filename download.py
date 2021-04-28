@@ -18,7 +18,6 @@ class Download:
 	def start(self):
 		self.progress_bar = tqdm(total=self.filesize, unit='iB', colour='red', unit_scale=True)
 		self.youtube.streams.get_highest_resolution().download()
-		print('start()')
 
 	def on_progress(self, chunk, fh, bytes_remaining):
 		downloaded = self.filesize - bytes_remaining
