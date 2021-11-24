@@ -1,5 +1,15 @@
-import os
 from moviepy.editor import *
-#video = VideoFileClip(os.path.join("path","to","movie.mp4"))
-video = VideoFileClip('All of Me - John Legend - Violin and Guitar Cover - Daniel Jang.mp4')
-video.audio.write_audiofile('All of Me - John Legend - Violin and Guitar Cover - Daniel Jang.mp3')
+
+mp4 = 'Video.mp4'
+
+mp3 = 'audio.mp3'
+
+videoClip = VideoFileClip(mp4)
+
+audioClip = videoClip.audio
+
+audioClip.write_audiofile(mp3)
+
+audioClip.close()
+videoClip.close()
+

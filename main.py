@@ -1,5 +1,6 @@
 import subprocess
 from pytube import Playlist
+from pytube import YouTube
 from tqdm import tqdm
 
 from download import Download
@@ -20,7 +21,8 @@ while(is_running):
 	#subprocess.run(['clear'])
 	print('1 - Download de Video')
 	print('2 - Download de Playlist')
-	print('3 - Sair')
+	print('3 - Download de Playlist em MP3')
+	print('4 - Sair')
     
 	option = int(input('Informe o que deseja fazer:  '))
     
@@ -30,6 +32,6 @@ while(is_running):
 	elif option == 2:
 		download_playlist()
 	elif option == 3:
-		is_running = False
-	else:
-		is_running = False
+	  pass
+	elif option == 4:
+	  is_running = False

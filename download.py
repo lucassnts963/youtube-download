@@ -11,6 +11,7 @@ class Download:
 
 	def __init__(self, link):
 		self.youtube = YouTube(link)
+		self.title = self.youtube.title
 		self.filesize = self.youtube.streams.get_highest_resolution().filesize
 		self.youtube.register_on_progress_callback(self.on_progress)
 		self.youtube.register_on_complete_callback(self.on_complete)
